@@ -10,12 +10,18 @@ vector<int> pairsum(vector<int> nums, int target)
     int n = nums.size();
 
     int i = 0, j = n - 1;
-    for (i = 0; i < n; i)
+    while ( i < n)
     {   
-        if(nums.size){
-            
+        int pariSum = nums[i] + nums[j] ; 
+        if(pariSum > target){
+            j--;
+        }else if(pariSum < target){
+            i++;
+        }else {
+            ans.push_back(i);
+            ans.push_back(j);
+            return ans;
         }
-        
     }
     return ans;
 }
