@@ -3,7 +3,7 @@
 #include<algorithm>
 using namespace std;
 
-// majarity elements using sorted array
+// majarity elements using sorted array another approach 
 
 int majElement(vector<int> nums)
 {
@@ -31,7 +31,9 @@ int majElement(vector<int> nums)
 
 int main()
 {
-    vector<int> nums = {0,0,1,1,2,2,2,2};
+    vector<int> nums = {6,5,5};
+    // this have a bug of when we give 3 elements in array and 2 major elemets after sorting it returns always last element
+    // and if i give array of 6 8 8 then the sorted will be 8 8 6 but it will always give the last element not first 
     int answer = majElement(nums);
     cout << "The majoriy element in the array is : "<<answer<< endl;
 
